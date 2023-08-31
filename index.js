@@ -23,14 +23,17 @@ const handleLoadVideos = async categoryId => {
     console.log(data.data);
     const videosArr = data.data; // this is my videos array
 
+    const noContainer = document.getElementById('no-container'); // this is my card container for showing no content
     const cardContainer = document.getElementById('card-container'); // this is my empty cards container
     cardContainer.textContent = ''; // reload everytime for each category
 
-    videosArr?.forEach(video => {
-        const div = document.createElement('div');
-        div.innerHTML = `
+    if (videosArr.length > 0) {
+        noContainer.classList.add('hidden');
+        videosArr?.forEach(video => {
+            const div = document.createElement('div');
+            div.innerHTML = `
             <div class="card card-compact bg-base-100">
-                <figure><img src="./images/Icon.png" alt="Shoes" class="rounded-lg" /></figure>
+                <figure><img src="${video.thumbnail}" alt="Shoes" class="rounded-lg" /></figure>
                 <div class="badge badge-md bg-[#171717] text-white -mt-4">987,654</div>
                 <div class="card-body">
                     <div class="flex justify-center gap-2">
@@ -47,8 +50,11 @@ const handleLoadVideos = async categoryId => {
                 </div>
             </div>
         `;
-        cardContainer.appendChild(div);
-    })
+            cardContainer.appendChild(div);
+        })
+    }else{
+        noContainer.classList.remove('hidden');
+    }
 }
 
 handleCategory();
