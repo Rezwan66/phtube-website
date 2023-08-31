@@ -32,16 +32,35 @@
   </nav>
   <!-- main section starts here -->
   <main>
-    <!-- categories container div -->
-    <div>
-      <div id="tab-container" class="tabs p-5 mx-auto text-center flex justify-center gap-6">
+    <!-- categories container section -->
+    <section>
+      <div id="tab-container" class="tabs p-3 md:p-5 mx-auto text-center flex flex-wrap justify-center gap-3 md:gap-6">
         <!-- <a class="tab btn px-6 bg-[#FF1F3D] normal-case text-white hover:bg-red-400">Tab 1</a> -->
-        <!--<a class="tab btn">Tab 2</a>
-        <a class="tab btn">Tab 3</a> -->
       </div>
-    </div>
-    <!-- cards container section -->
-    <section></section>
+    </section>
+    <!-- video cards container section -->
+    <section>
+      <div id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-10 gap-8">
+        <!-- card 1 -->
+        <div class="card card-compact w-96 bg-base-100">
+          <figure><img src="./images/Icon.png" alt="Shoes" class="rounded-lg" /></figure>
+          <div class="badge badge-md bg-[#171717] text-white -mt-4">987,654</div>
+          <div class="card-body">
+            <div class="flex justify-center gap-2">
+              <div>
+                <figure><img src="./images/Icon.png" alt="Shoes" class="w-14 rounded-full" /></figure>
+              </div>
+              <div class="space-y-2">
+                <h2 class="card-title">If a dog chews shoes whose shoes does he choose?</h2>
+                <p>Shoes!</p>
+                <!-- svg here -->
+                <p>views</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <!-- scripts start from here -->
   <script src="./index.js"></script>

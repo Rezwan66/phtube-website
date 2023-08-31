@@ -5,7 +5,7 @@ const handleCategory = async () => {
     // console.log(data.data);
     const categories = data.data; // this is my categories array
     const tabContainer = document.getElementById('tab-container'); // this is my empty tab container
-    tabContainer.textContent = '';
+
     categories.forEach(category => {
         const div = document.createElement('div');
         div.innerHTML = `
@@ -15,6 +15,10 @@ const handleCategory = async () => {
         `;
         tabContainer.appendChild(div);
     })
+}
+
+const handleLoadVideos = async (categoryId) => {
+    const res = await fetch(`https://openapi.programming-hero.com/api/videos/category/${categoryId}`);
 }
 
 handleCategory();
