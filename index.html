@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PH Tube</title>
-    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <!-- navbar starts here -->
-    <nav class="px-8 mt-3">
-      <div class="navbar bg-base-100">
-        <div class="navbar-start">
-          <a class="btn btn-ghost normal-case text-xl">
-            <img src="./images/Logo.png" alt="">
-          </a>
-        </div>
-        <!-- sort by view button -->
-        <div class="navbar-center hidden lg:flex">
-          <button class="btn bg-[#25252533] normal-case text-black px-5">Sort by view</button>
-        </div>
-        <!-- go to seperate page button -->
-        <div class="navbar-end">
-          <button class="btn bg-[#FF1F3D] normal-case text-white px-5 hover:bg-red-400">Blog</button>
-        </div>
-      </div>
-      <hr class="text-[#17171733] border w-full mx-auto mt-3">
-    </nav>
-    <main>
 
-    </main>
-    <!-- scripts start from here -->
-    <script src="./index.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PH Tube</title>
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <!-- navbar starts here -->
+  <nav class="px-8 mt-3">
+    <div class="navbar bg-base-100">
+      <div class="navbar-start">
+        <a class="btn btn-ghost normal-case text-xl">
+          <img src="./images/Logo.png" alt="">
+        </a>
+      </div>
+      <!-- sort by view button -->
+      <div class="navbar-center hidden lg:flex">
+        <button class="btn bg-[#25252533] normal-case text-black px-5">Sort by view</button>
+      </div>
+      <!-- go to seperate page button -->
+      <div class="navbar-end">
+        <button class="btn bg-[#FF1F3D] normal-case text-white px-5 hover:bg-red-400">Blog</button>
+      </div>
+    </div>
+    <hr class="text-[#17171733] border w-full mx-auto mt-3">
+  </nav>
+  <!-- main section starts here -->
+  <main>
+    <!-- categories container div -->
+    <div>
+      <div id="tab-container" class="tabs p-6 mx-auto text-center flex justify-center gap-6">
+        <a class="tab btn px-6 bg-[#FF1F3D] normal-case text-white hover:bg-red-400">Tab 1</a>
+        <!--<a class="tab btn">Tab 2</a>
+        <a class="tab btn">Tab 3</a> -->
+      </div>
+    </div>
+    <!-- cards container section -->
+    <section></section>
+  </main>
+  <!-- scripts start from here -->
+  <script src="./index.js"></script>
+</body>
+
 </html>
