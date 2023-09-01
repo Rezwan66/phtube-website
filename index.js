@@ -34,7 +34,11 @@ const handleLoadVideos = async categoryId => {
             div.innerHTML = `
             <div class="card card-compact bg-base-100">
                 <figure><img src="${video.thumbnail}" class="rounded-lg h-48 w-full" /></figure>
-                <div class="badge badge-md bg-[#171717] border-0 text-white -mt-6">987,654</div>
+                <div>
+                    <p class=" rounded-md text-xs p-2 bg-[#171717] border-0 text-white -mt-7 ml-64">
+                        ${''}
+                    </p>
+                </div>
                 <div class="card-body">
                     <div class="flex gap-3">
                         <div>
