@@ -9,7 +9,7 @@ const handleCategory = async () => {
     categories.forEach(category => {
         const div = document.createElement('div');
         div.innerHTML = `
-        <a onclick="handleLoadVideos('${category.category_id}')" class="tab btn px-6 bg-[#FF1F3D] normal-case text-white hover:bg-red-400">
+        <a onclick="handleLoadVideos('${category.category_id}')" class="tab btn px-6 normal-case">
             ${category.category}
         </a>
         `;
@@ -34,20 +34,19 @@ const handleLoadVideos = async categoryId => {
             div.innerHTML = `
             <div class="card card-compact bg-base-100">
                 <figure><img src="${video.thumbnail}" class="rounded-lg h-48 w-full" /></figure>
-                <div class="badge badge-md bg-[#171717] text-white -mt-6">987,654</div>
+                <div class="badge badge-md bg-[#171717] border-0 text-white -mt-6">987,654</div>
                 <div class="card-body">
                     <div class="flex gap-3">
                         <div>
                             <div class="avatar">
-                                <div class="w-11 rounded-full">
+                                <div class="w-10 rounded-full">
                                     <img src="${video.authors[0].profile_picture}" />
                                 </div>
                             </div>
                         </div>
                         <div class="space-y-1">
                             <h2 class="text-lg font-bold">${video.title}</h2>
-                            <p>${video.authors[0].profile_name}</p>
-                            <!-- svg here -->
+                            <p>${video.authors[0].profile_name} <img class="inline-block" src="${video?.authors[0]?.verified?'./images/verified.png':''}" /></p>
                             <p>${video.others.views} views</p>
                         </div>
                     </div>
