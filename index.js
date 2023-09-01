@@ -1,6 +1,6 @@
 // console.log('connected');
 let isSorted = false; // to track my videos sorted state
-let currentCategoryId = null;
+let currentCategoryId = 0; // track current category id
 
 const handleCategory = async () => {
     const res = await fetch('https://openapi.programming-hero.com/api/videos/categories');
@@ -8,7 +8,7 @@ const handleCategory = async () => {
     // console.log(data.data);
     const categories = data.data; // this is my categories array
     const tabContainer = document.getElementById('tab-container'); // this is my empty tab container
-    tabContainer.textContent = '';
+    // tabContainer.textContent = '';
     categories.forEach(category => {
         const div = document.createElement('div');
         div.innerHTML = `
@@ -21,7 +21,11 @@ const handleCategory = async () => {
 }
 
 const handleLoadVideos = async categoryId => {
-    currentCategoryId = categoryId;
+    if (categoryId !== currentCategoryId) {
+        isSorted = false; // if a different category id is passed, then make it unsorted again
+        currentCategoryId = categoryId;
+    }
+
     const res = await fetch(`https://openapi.programming-hero.com/api/videos/category/${currentCategoryId}`);
     const data = await res.json();
     console.log(data.data);
@@ -30,17 +34,15 @@ const handleLoadVideos = async categoryId => {
     const noContainer = document.getElementById('no-container'); // this is my card container for showing no content
     const cardContainer = document.getElementById('card-container'); // this is my empty cards container
     cardContainer.textContent = ''; // reload everytime for each category
-    
 
-    
+    // sort method here
+    if (isSorted) {
+        videosArr.sort((a, b) => b.others.views.slice(0, -1) - a.others.views.slice(0, -1));
+    }
+
     if (videosArr.length > 0) {
         noContainer.classList.add('hidden');
-        // sort method here
-        if (isSorted) {
-            videosArr.sort((a, b) => b.others.views.slice(0,-1) - a.others.views.slice(0,-1));
-        }
-        
-        console.log(videosArr);
+        // console.log(videosArr);
         videosArr?.forEach(video => {
             const div = document.createElement('div');
             div.innerHTML = `
@@ -78,7 +80,7 @@ const handleLoadVideos = async categoryId => {
 }
 
 const handleSort = () => {
-    isSorted = !isSorted // toggle sorted state: true/false
+    isSorted = !isSorted; // toggle sorted state: true/false
     // console.log('clicked sorted button');
     // console.log(isSorted);
     handleLoadVideos(currentCategoryId);
