@@ -14,17 +14,17 @@
   <!-- navbar starts here -->
   <nav class="px-1 md:px-8 mt-3">
     <div class="navbar bg-base-100">
-      <div class="navbar-start">
+      <div class="navbar-start -ml-10 mr-16 md:-ml-0 md:mr-0">
         <a class="btn btn-ghost normal-case text-xl">
           <img src="./images/Logo.png" alt="" class="w-2/3 md:w-full">
         </a>
       </div>
       <!-- sort by view button -->
       <div class="navbar-center">
-        <button class="btn bg-[#25252533] normal-case text-black px-5">Sort by view</button>
+        <button onclick="handleSort()" class="btn bg-[#25252533] normal-case text-black px-5">Sort by view</button>
       </div>
       <!-- go to seperate page button -->
-      <div class="navbar-end hidden md:flex">
+      <div class="navbar-end">
         <button class="btn bg-[#FF1F3D] normal-case text-white px-5 hover:bg-red-400">Blog</button>
       </div>
     </div>
