@@ -33,18 +33,22 @@ const handleLoadVideos = async categoryId => {
             const div = document.createElement('div');
             div.innerHTML = `
             <div class="card card-compact bg-base-100">
-                <figure><img src="${video.thumbnail}" alt="Shoes" class="rounded-lg" /></figure>
-                <div class="badge badge-md bg-[#171717] text-white -mt-4">987,654</div>
+                <figure><img src="${video.thumbnail}" class="rounded-lg h-48 w-full" /></figure>
+                <div class="badge badge-md bg-[#171717] text-white -mt-6">987,654</div>
                 <div class="card-body">
-                    <div class="flex justify-center gap-2">
+                    <div class="flex gap-3">
                         <div>
-                            <figure><img src="./images/Icon.png" alt="Shoes" class="w-14 rounded-full" /></figure>
+                            <div class="avatar">
+                                <div class="w-11 rounded-full">
+                                    <img src="${video.authors[0].profile_picture}" />
+                                </div>
+                            </div>
                         </div>
-                        <div class="space-y-2">
-                            <h2 class="text-base font-bold">If a dog chews shoes whose shoes does he choose?</h2>
-                            <p>Shoes!</p>
+                        <div class="space-y-1">
+                            <h2 class="text-lg font-bold">${video.title}</h2>
+                            <p>${video.authors[0].profile_name}</p>
                             <!-- svg here -->
-                            <p>views</p>
+                            <p>${video.others.views} views</p>
                         </div>
                     </div>
                 </div>
