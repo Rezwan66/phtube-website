@@ -32,12 +32,13 @@ const handleLoadVideos = async categoryId => {
         videosArr?.forEach(video => {
             const div = document.createElement('div');
             div.innerHTML = `
-            <div class="card card-compact bg-base-100">
+            <div class="card card-compact bg-base-100 relative">
                 <figure><img src="${video.thumbnail}" class="rounded-lg h-48 w-full" /></figure>
-                <div>
-                    <p class=" rounded-md text-xs p-2 bg-[#171717] border-0 text-white -mt-7 ml-64">
-                        ${''}
-                    </p>
+                <div class="absolute text-xs text-white text-center top-[165px] right-1">
+                    ${video?.others?.posted_date?`
+                        <span class="bg-[#171717] py-1 px-2 rounded-md">
+                            ${Math.floor((video.others.posted_date)/3600)}hrs ${Math.floor((video.others.posted_date % 3600)/60)}min ago
+                        </span>`:''}
                 </div>
                 <div class="card-body">
                     <div class="flex gap-3">
