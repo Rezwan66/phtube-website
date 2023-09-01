@@ -37,7 +37,7 @@ const handleLoadVideos = async categoryId => {
 
     // sort method here
     if (isSorted) {
-        videosArr.sort((a, b) => b.others.views.slice(0, -1) - a.others.views.slice(0, -1));
+        videosArr.sort((a, b) => Number(b.others.views.slice(0, -1)) - Number(a.others.views.slice(0, -1)));
     }
 
     if (videosArr.length > 0) {
