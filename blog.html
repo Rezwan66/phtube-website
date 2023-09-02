@@ -45,8 +45,8 @@
                     </li>
                     <li><strong class="text-lg">let:</strong>
                         Both `let` and `const` are <b>block scoped</b>, which means they can only be accessed within the
-                        block of code they are declared in. If they are declared inside a specific region (e.g. inside
-                        curly brackets `{}`) they cannot be called outside that scope. If they are declared at the very
+                        block of code they are declared in. If any variables/parameters are declared inside a specific region (e.g. inside
+                        curly brackets `{}` of a function) they cannot be called outside that scope. If they are declared at the very
                         beginning of the script, at the outermost block, they can be accessed throughout the block.
                         Moreover, `let` and `const` cannot be re-declared so they are more useful for larger scripts
                         with a lot of functions and variables. But `let` differs from `const` in one crucial way, that
@@ -67,9 +67,6 @@
             <div class="mt-6">
                 <h1 class="text-center text-4xl font-bold">Some use cases of null and undefined</h1>
                 <hr class="border-2 my-4">
-                <p>
-
-                </p>
                 <ol class="list-decimal">
                     <li>
                         <strong class="text-lg">undefined:</strong>
@@ -78,6 +75,36 @@
                     <li>
                         <strong class="text-lg">null:</strong>
                         `null` is defined as the absence of value of a variable. It is a primitive JavaScript datatype like `undefined`, and is used in many cases to set the initial value of a variable to null or nothing, so that it can be changed later accordingly. In JS, <code>typeof null</code> is object. Both `null` and `undefined` are <b>falsey</b> values which return false in case of a condiiton.
+                    </li>
+                </ol>
+            </div>
+            <!-- What do you mean by REST API? -->
+            <div class="mt-6">
+                <h1 class="text-center text-4xl font-bold">Understanding REST API</h1>
+                <hr class="border-2 my-4">
+                <p>
+                    REST API methods are a series of C.R.U.D.(Create, Read, Update, Delete) operations which can be performed on an API resource database, with the help of a server. There are a handful of very useful REST API methods which are briefly discussed below.
+                </p>
+                <ol class="list-decimal">
+                    <li>
+                        <strong class="text-lg">GET:</strong>
+                        Used to get information (<b>read</b> data) about an API resource.
+                    </li>
+                    <li>
+                        <strong class="text-lg">POST:</strong>
+                        An API <b>create</b> operation, used to create an API resource.
+                    </li>
+                    <li>
+                        <strong class="text-lg">PUT:</strong>
+                        An API <b>update</b> operation that checks the database for existing data, then edits the data with new resources if there is any change, or creates new data if it was previously non-existent.
+                    </li>
+                    <li>
+                        <strong class="text-lg">PATCH:</strong>
+                        API <b>update</b> operation, used to change or modify an API resource.
+                    </li>
+                    <li>
+                        <strong class="text-lg">DELETE:</strong>
+                        Used to <b>delete</b> an API resource entirely.
                     </li>
                 </ol>
             </div>
