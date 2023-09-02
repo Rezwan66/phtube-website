@@ -36,17 +36,51 @@
                 </p>
                 <ol class="list-decimal">
                     <li><strong class="text-lg">var:</strong>
-                        `var` is <b>function scoped</b>, which means that they can be accessed anywhere inside a function after they are declared, even in another function which maybe called inside that function. `var` is also <b>global scoped</b>, which means that after declaration, they can be accessed anywhere throughout the whole script, and even re-declared. This might cause problems in a large script where a developer might need to declare a lot of variables inside or outside functions and do a lot of mathematical calculations.
+                        `var` is <b>function scoped</b>, which means that they can be accessed anywhere inside a
+                        function after they are declared, even in another function which maybe called inside that
+                        function. `var` is also <b>global scoped</b>, which means that after declaration, they can be
+                        accessed anywhere throughout the whole script, and even re-declared. This might cause problems
+                        in a large script where a developer might need to declare a lot of variables inside or outside
+                        functions and do a lot of mathematical calculations.
                     </li>
                     <li><strong class="text-lg">let:</strong>
-                        Both `let` and `const` are <b>block scoped</b>, which means they can only be accessed within the block of code they are declared in. If they are declared inside a specific region (e.g. inside curly brackets `{}`) they cannot be called outside that scope. If they are declared at the very beginning of the script, at the outermost block, they can be accessed throughout the block. Moreover, `let` and `const` cannot be re-declared so they are more useful for larger scripts with a lot of functions and variables. But `let` differs from `const` in one crucial way, that it can be <b>re-assigned</b>. This means that variables declared with `let` can be edited according to need, and hence, they are perfect for numerical calculations such as keeping the count of a variable inside a loop and changing it every time.
+                        Both `let` and `const` are <b>block scoped</b>, which means they can only be accessed within the
+                        block of code they are declared in. If they are declared inside a specific region (e.g. inside
+                        curly brackets `{}`) they cannot be called outside that scope. If they are declared at the very
+                        beginning of the script, at the outermost block, they can be accessed throughout the block.
+                        Moreover, `let` and `const` cannot be re-declared so they are more useful for larger scripts
+                        with a lot of functions and variables. But `let` differs from `const` in one crucial way, that
+                        it can be <b>re-assigned</b>. This means that variables declared with `let` can be edited
+                        according to need, and hence, they are perfect for numerical calculations such as keeping the
+                        count of a variable inside a loop and changing it every time.
                     </li>
                     <li><strong class="text-lg">const:</strong>
-                        `const` variables have a lot of similar behaviours to `let`, like they are also <b>block scoped</b>, and they cannot also be re-declared. However, `const` does not allow re-assign of the values of the variables, which means that the values stay constant, which is also very useful in large code spaces. But, arrays or objects declared using `const` still retain some of their functionalities like 'push', 'pop', or changing object property values.
+                        `const` variables have a lot of similar behaviours to `let`, like they are also <b>block
+                            scoped</b>, and they cannot also be re-declared. However, `const` does not allow re-assign
+                        of the values of the variables, which means that the values stay constant, which is also very
+                        useful in large code spaces. But, arrays or objects declared using `const` still retain some of
+                        their functionalities like 'push', 'pop', or changing object property values.
                     </li>
                 </ol>
             </div>
             <!-- Tell us the use cases of null and undefined -->
+            <div class="mt-6">
+                <h1 class="text-center text-4xl font-bold">Some use cases of null and undefined</h1>
+                <hr class="border-2 my-4">
+                <p>
+
+                </p>
+                <ol class="list-decimal">
+                    <li>
+                        <strong class="text-lg">undefined:</strong>
+                        In JavaScript, an `undefined` variable is a variable which hasn't been initialized. For e.g. if we define <code class="mx-auto">let name;</code> and don't assign a value to it, it is set as `undefined`. In the same way, if we define a function but do not return anything from it, that function is also `undefined`. For e.g. <br><code>const handleSum = () => {2+2;}</code><br> Morover, if we call a function which takes some parameters as input, but do not pass it any arguments, the values of those function parameters are set as `undefined`. For e.g. <br><code>const sum = (a,b) => a+b; <br>sum(); // the values of a and b in the function call are set as undefined</code><br> Similarly, an empty return of a function, a non-existent property of an object, an index call of an array outside it's index-range, deleting an array item, all these actions lead to `undefined` values. A variable can also directly be declared as undefined. In JavaScript, <code>typeof undefined</code> is undefined.
+                    </li>
+                    <li>
+                        <strong class="text-lg">null:</strong>
+                        `null` is defined as the absence of value of a variable. It is a primitive JavaScript datatype like `undefined`, and is used in many cases to set the initial value of a variable to null or nothing, so that it can be changed later accordingly. In JS, <code>typeof null</code> is object. Both `null` and `undefined` are <b>falsey</b> values which return false in case of a condiiton.
+                    </li>
+                </ol>
+            </div>
         </section>
     </main>
 </body>
