@@ -12,7 +12,7 @@ const handleCategory = async () => {
     categories.forEach(category => {
         const div = document.createElement('div');
         div.innerHTML = `
-        <a onclick="handleLoadVideos('${category.category_id}')" class="tab btn px-6 normal-case">
+        <a onclick="handleLoadVideos('${category.category_id}')" class="tab btn bg-[#25252526] text-[#252525B2] px-6 normal-case">
             ${category.category}
         </a>
         `;
@@ -54,12 +54,12 @@ const handleLoadVideos = async categoryId => {
                             ${Math.floor((video.others.posted_date) / 3600)}hrs ${Math.floor((video.others.posted_date % 3600) / 60)}min ago
                         </span>`: ''}
                 </div>
-                <div class="card-body">
+                <div class="mt-4">
                     <div class="flex gap-3">
                         <div>
                             <div class="avatar">
                                 <div class="w-10 rounded-full">
-                                    <img src="${video.authors[0].profile_picture}" />
+                                    <img src="${video?.authors[0]?.profile_picture}" />
                                 </div>
                             </div>
                         </div>
