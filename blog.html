@@ -15,14 +15,40 @@
         <div class="navbar bg-base-300">
             <div class="flex-1">
                 <a class="btn btn-ghost normal-case text-xl">
-                    <img src="./images/Logo.png" alt="" ><sup class="text-[#FF1F3D] font-bold">Blog</sup>
+                    <img src="./images/Logo.png" alt=""><sup class="text-[#FF1F3D] font-bold">Blog</sup>
                 </a>
             </div>
             <div class="flex-none">
-                <a href="./index.html" class="btn bg-[#FF1F3D] normal-case text-white px-5 hover:bg-red-400" >Go back</a>
+                <a href="./index.html" class="btn bg-[#FF1F3D] normal-case text-white px-5 hover:bg-red-400">Go back</a>
             </div>
         </div>
     </nav>
+    <main>
+        <section class="max-w-[1440px] mx-auto">
+            <!-- Discuss the scope of var, let, and const -->
+            <div class="mt-6">
+                <h1 class="text-center text-4xl font-bold">The scope of var, let, and const in JavaScript</h1>
+                <hr class="border-2 my-4">
+                <p>
+                    JavaScript is a dynamically typed language which means that we can simply use `var`, `let`, and
+                    `const` directly to assign variables without indicating their types. However, `var`, `let`, and
+                    `const` each have different scopes and characteristics.
+                </p>
+                <ol class="list-decimal">
+                    <li><strong class="text-lg">var:</strong>
+                        `var` is <b>function scoped</b>, which means that they can be accessed anywhere inside a function after they are declared, even in another function which maybe called inside that function. `var` is also <b>global scoped</b>, which means that after declaration, they can be accessed anywhere throughout the whole script, and even re-declared. This might cause problems in a large script where a developer might need to declare a lot of variables inside or outside functions and do a lot of mathematical calculations.
+                    </li>
+                    <li><strong class="text-lg">let:</strong>
+                        Both `let` and `const` are <b>block scoped</b>, which means they can only be accessed within the block of code they are declared in. If they are declared inside a specific region (e.g. inside curly brackets `{}`) they cannot be called outside that scope. If they are declared at the very beginning of the script, at the outermost block, they can be accessed throughout the block. Moreover, `let` and `const` cannot be re-declared so they are more useful for larger scripts with a lot of functions and variables. But `let` differs from `const` in one crucial way, that it can be <b>re-assigned</b>. This means that variables declared with `let` can be edited according to need, and hence, they are perfect for numerical calculations such as keeping the count of a variable inside a loop and changing it every time.
+                    </li>
+                    <li><strong class="text-lg">const:</strong>
+                        `const` variables have a lot of similar behaviours to `let`, like they are also <b>block scoped</b>, and they cannot also be re-declared. However, `const` does not allow re-assign of the values of the variables, which means that the values stay constant, which is also very useful in large code spaces. But, arrays or objects declared using `const` still retain some of their functionalities like 'push', 'pop', or changing object property values.
+                    </li>
+                </ol>
+            </div>
+            <!-- Tell us the use cases of null and undefined -->
+        </section>
+    </main>
 </body>
 
 </html>
