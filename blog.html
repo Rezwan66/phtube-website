@@ -23,7 +23,7 @@
             </div>
         </div>
     </nav>
-    <main>
+    <main class="leading-9">
         <section class="max-w-screen-xl mx-auto mb-6 px-6">
             <!-- Discuss the scope of var, let, and const -->
             <div class="mt-6 text-justify">
@@ -39,16 +39,16 @@
                         `var` is <b>function scoped</b>, which means that they can be accessed anywhere inside a
                         function after they are declared, even in another function which maybe called inside that
                         function. `var` is also <b>global scoped</b>, which means that after declaration, they can be
-                        accessed anywhere throughout the whole script, and even re-declared. This might cause problems
+                        accessed anywhere throughout the whole script, and even <b>re-declared</b>. This might cause problems
                         in a large script where a developer might need to declare a lot of variables inside or outside
                         functions and do a lot of mathematical calculations.
                     </li>
                     <li><strong class="text-lg">let:</strong>
-                        Both `let` and `const` are <b>block scoped</b>, which means they can only be accessed within the
+                        Both `let` and `const` are <b>block scoped</b>, which means that they can only be accessed within the
                         block of code they are declared in. If any variables/parameters are declared inside a specific region (e.g. inside
-                        curly brackets `{}` of a function) they cannot be called outside that scope. If they are declared at the very
+                        curly brackets `{}` of a function) they cannot be called outside that region. If they are declared at the very
                         beginning of the script, at the outermost block, they can be accessed throughout the block.
-                        Moreover, `let` and `const` cannot be re-declared so they are more useful for larger scripts
+                        Moreover, `let` and `const` <b>cannot be re-declared</b> so they are more useful for larger scripts
                         with a lot of functions and variables. But `let` differs from `const` in one crucial way, that
                         it can be <b>re-assigned</b>. This means that variables declared with `let` can be edited
                         according to need, and hence, they are perfect for numerical calculations such as keeping the
@@ -58,7 +58,7 @@
                         `const` variables have a lot of similar behaviours to `let`, like they are also <b>block
                             scoped</b>, and they cannot also be re-declared. However, `const` does not allow re-assign
                         of the values of the variables, which means that the values stay constant, which is also very
-                        useful in large code spaces. But, arrays or objects declared using `const` still retain some of
+                        useful in large code spaces and declaring functions. But, arrays or objects declared using `const` still retain some of
                         their functionalities like 'push', 'pop', or changing object property values.
                     </li>
                 </ol>
@@ -70,7 +70,7 @@
                 <ol class="list-decimal">
                     <li>
                         <strong class="text-lg">undefined:</strong>
-                        In JavaScript, an `undefined` variable is a variable which hasn't been initialized. For e.g. if we define <code class="mx-auto">let name;</code> and don't assign a value to it, it is set as `undefined`. In the same way, if we define a function but do not return anything from it, that function is also `undefined`. For e.g. <br><code>const handleSum = () => {2+2;}</code><br> Morover, if we call a function which takes some parameters as input, but do not pass it any arguments, the values of those function parameters are set as `undefined`. For e.g. <br><code>const sum = (a,b) => a+b; <br>sum(); // the values of a and b in the function call are set as undefined</code><br> Similarly, an empty return of a function, a non-existent property of an object, an index call of an array outside it's index-range, deleting an array item, all these actions lead to `undefined` values. A variable can also directly be declared as undefined. In JavaScript, <code>typeof undefined</code> is undefined.
+                        In JavaScript, an `undefined` variable is a variable which hasn't been initialized. For e.g. if we define <code class="mx-auto">let name;</code> and don't assign a value to it, it is set as `undefined`. In the same way, if we define a function but do not return anything from it, that function is also `undefined`. For e.g. <br><code>const handleSum = () => {2+2;}</code><br> Morover, if we call a function which takes some parameters as input, but do not pass it any arguments, the values of those function parameters are set as `undefined`. For e.g. <br><code>const sum = (a,b) => a+b; <br>sum(); // the values of a and b in the function call are set as undefined</code><br> Similarly, an empty return of a function, calling a non-existent property of an object, an index call of an array outside it's index-range, deleting an array item, all these actions lead to `undefined` values. A variable can also directly be declared as undefined. In JavaScript, <code>typeof undefined</code> is `undefined`.
                     </li>
                     <li>
                         <strong class="text-lg">null:</strong>
